@@ -3,29 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页</title>
+    <title>我的扩展网页</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>欢迎来到我的简单网页！</h1>
+        <div class="container">
+            <h1>欢迎来到我的扩展网页！</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#services">服务</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="intro">
-            <p id="dynamicText">这是一个非常基础的网页示例，展示了HTML、CSS和JavaScript的结合。</p>
+    <main class="container">
+        <section id="home" class="hero">
+            <p id="dynamicText">这是一个经过扩展的网页示例，展示了更丰富的HTML、CSS和JavaScript的结合。</p>
             <button id="changeTextBtn">点击我改变文字</button>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>关于我们</h2>
+            <p>我们致力于提供高质量的解决方案，帮助客户实现他们的目标。我们拥有一支充满激情和经验的团队，专注于创新和卓越。</p>
+            <p>自成立以来，我们不断学习和成长，以适应不断变化的市场需求。我们的核心价值观是客户至上、诚信负责和持续改进。</p>
+        </section>
+
+        <section id="services" class="content-section">
+            <h2>我们的服务</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>网页设计</h3>
+                    <p>提供专业、响应式的网页设计服务，打造引人注目的在线形象。</p>
+                </div>
+                <div class="service-item">
+                    <h3>前端开发</h3>
+                    <p>利用最新的前端技术，构建高性能、用户友好的交互式界面。</p>
+                </div>
+                <div class="service-item">
+                    <h3>内容管理</h3>
+                    <p>协助您管理和优化网站内容，确保信息准确、及时更新。</p>
+                </div>
+            </div>
         </section>
 
         <section class="image-section">
             <h2>图片展示</h2>
-            <img src="https://via.placeholder.com/300x200?text=Placeholder+Image" alt="占位图片">
-            <p>这是一张占位图片 ，你可以替换成你自己的图片链接。</p>
+            <img src="https://via.placeholder.com/600x300?text=Expanded+Placeholder+Image" alt="占位图片">
+            <p>这是一张更大的占位图片 ，你可以替换成你自己的图片链接。</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>联系我们</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">邮箱:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">留言:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">发送消息</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 我的简单网页. 保留所有权利。</p>
+        <div class="container">
+            <p>&copy; 2025 我的扩展网页. 保留所有权利。</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
