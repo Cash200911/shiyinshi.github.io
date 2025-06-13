@@ -1,70 +1,293 @@
+/* 通用样式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5; /* 更柔和的背景色 */
     color: #333;
     line-height: 1.6;
 }
 
+.container {
+    max-width: 1000px; /* 增加最大宽度 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
 header {
-    background-color: #333;
+    background-color: #2c3e50; /* 深色背景 */
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0; /* 增加内边距 */
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* 增大标题字体 */
 }
 
+/* 导航栏样式 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex; /* 横向排列 */
+    justify-content: center; /* 居中显示 */
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db; /* 悬停变色 */
+}
+
+/* 主要内容区样式 */
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    padding: 30px 0; /* 增加主内容区上下内边距 */
+}
+
+.content-section {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 40px; /* 增加内边距 */
+    margin-bottom: 30px; /* 增加底部外边距 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 更明显的阴影 */
 }
 
-.intro, .image-section {
+.content-section h2 {
+    color: #2c3e50;
+    font-size: 2rem; /* 增大二级标题字体 */
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.content-section h2::after { /* 标题下划线装饰 */
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 10px auto 0;
+}
+
+/* 英雄区样式 */
+.hero {
+    text-align: center;
+    padding: 60px 20px; /* 增加内边距 */
+    background-color: #eaf2f8; /* 浅蓝色背景 */
+    border-radius: 10px;
     margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.intro:last-child, .image-section:last-child {
-    border-bottom: none;
+.hero p {
+    font-size: 1.2rem; /* 增大字体 */
+    margin-bottom: 30px;
+    color: #555;
 }
 
+/* 按钮样式 */
 button {
-    background-color: #007bff;
+    background-color: #3498db; /* 蓝色按钮 */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 25px; /* 增大按钮 */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 1.1rem; /* 增大字体 */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #2980b9;
+    transform: translateY(-2px); /* 悬停上浮效果 */
 }
 
-img {
+/* 服务网格样式 */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 响应式网格布局 */
+    gap: 25px; /* 网格间距 */
+    margin-top: 30px;
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.service-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* 图片样式 */
+.image-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.image-section img {
     max-width: 100%;
     height: auto;
-    display: block; /* 移除图片底部多余空间 */
-    margin: 15px 0;
+    display: block;
+    margin: 25px auto; /* 居中图片 */
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.image-section p {
+    font-style: italic;
+    color: #777;
+}
+
+/* 联系表单样式 */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px); /* 减去内边距 */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* 确保内边距和边框包含在宽度内 */
+}
+
+.contact-form textarea {
+    resize: vertical; /* 允许垂直调整大小 */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.contact-form button[type="submit"] {
+    width: auto; /* 按钮宽度自适应 */
+    display: block;
+    margin: 20px auto 0; /* 居中显示 */
+}
+
+/* 页脚样式 */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
+    padding: 25px 0;
+    background-color: #2c3e50;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* 小屏幕下导航垂直排列 */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content-section {
+        padding: 25px;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* 小屏幕下服务项单列显示 */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%; /* 小屏幕下输入框占满宽度 */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
